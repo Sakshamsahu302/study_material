@@ -1,0 +1,21 @@
+1] learn python basics
+2] python advance
+3] Learn Django 
+4] implement following projects:
+    1.OWL EYES | Django All Auth Implementation
+    2.Geek Glasses | Django Custom Auth User Model from AbstractBaseUser
+    3.Numerical | Django Simple Numeric Calculator Web App
+    4.Chew and Cheer | Django Project CRUD using AJAX, DJANGO FORMS, GRAPHQL and DJANGO REST/GRAPHQL APIs
+    5.Altered Datum API | Django Rest API App for React Blog App
+    6.School Chale Hum | Django School Management App
+    7.Clock Work | Django Redis-Celery-Channels-Websockets Integration
+    8.Borcelle CRM | Django Customer relationship management App
+    9.portfolio django App
+
+
+5] dockerize and deploy project in railways
+6] leetcode
+7] database
+8] os
+9] networking
+
