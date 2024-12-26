@@ -4,14 +4,15 @@ A block is a group of statements in a program or script.Usually it contains atle
 depending on the programming or the scripting language. A language which allows grouping of blocks is known as block structured language."""
 
 """Normally block can contain more blocks as well,so we get a nested block structure.A block in a script or programming language
-is a group of statements whic functions as if they were just one statement.In many cases,it also servers as a way to limit the lexical scope
+is a group of statements which functions as if they were just one statement.In many cases,it also servers as a way to limit the lexical scope
 of variables and functions."""
 
 """Initially in simple languages like Basic and Fortran there was no way of explicitly using block structures.
 Programmers had to rely on "go to" structures,because 'go to programs' can easily turn into spegati codes i.e. tangled and instructable control structures. """
 
 """Block Structures were first formalized in ALGOL(programming lang) as a compound statement
-Programming languages such as ALGOL,pascal and others use certain methods to group statements into blocks:
+Programming languages such as ALGOL,pascal and others use certain methods to group statements into blocks
+Understanding these methods of constructing block in other diffrent languages is crucial to understand the advantages of using block in Python:
 
 1. Methods for Grouping Blocks in Programming Languages
 Different languages use different ways to define these blocks.
