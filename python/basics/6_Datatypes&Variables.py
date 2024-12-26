@@ -330,3 +330,215 @@ OUTPUT:
 4
 
 """
+
+#String,Unicode and Python
+
+"""All strings in Python 3 are sequences of "pure" Unicode characters, no specific encoding like UTF-8.
+
+There are different ways to define strings in Python:"""
+
+s = 'I am a string enclosed in single quotes.'
+s2 = "I am another string, but I am enclosed in double quotes."
+
+print(s,s2)
+
+"""
+Both s and s2 of the previous example are variables referencing string objects.
+We can see that string literals can either be enclosed in matching single (') or in double quotes (").
+Single quotes will have to be escaped with a backslash \,
+ if the string is defined with single quotes:
+"""
+s3 = 'It doesn\'t matter!'
+print(s3)
+
+"""This is not necessary, if the string is represented by double quotes:"""
+
+s3 = "It doesn't matter!"
+print(s3)
+
+"""Analogously, we will have to escape a double quote inside a double quoted string:"""
+
+txt = "He said: \"It doesn't matter, if you enclose a string in single or double quotes!\""
+print(txt) 
+
+"""OUTPUT:He said: "It doesn't matter, if you enclose a string in single or double quotes!" """
+
+"""
+They can also be enclosed in matching groups of three single or double quotes.
+In this case they are called triple-quoted strings.
+The backslash () character is used to escape characters that otherwise have a special meaning,
+such as newline, backslash itself, or the quote character."""
+
+txt = '''A string in triple quotes can extend
+over multiple lines like this one, and can contain
+'single' and "double" quotes.'''
+print(txt)
+
+"""
+A string in Python consists of a series or sequence of characters - letters, numbers, and special characters.
+Strings can be subscripted or indexed. Similar to C, the first character of a string has the index 0."""
+
+s = "Hello World"
+print(s[0])
+
+"""OUTPUT:'H' """
+
+print(s[5])
+
+"""
+OUTPUT:' ' 
+"""
+
+"""The last character of a string can be accessed this way:"""
+
+print(s[len(s)-1])
+
+"""OUTPUT:
+'d'
+Yet, there is an easier way in Python. The last character can be accessed with -1, the second to last with -2 and so on:"""
+
+print(s[-1])
+
+"""OUTPUT:
+'d' """
+
+print(s[-2])
+
+"""OUTPUT:
+'l'
+"""
+
+#It's possible to start counting the indices from the right, as we have mentioned previously. In this case negative numbers are used, starting with -1 for the most right character.
+
+
+#Some operators and functions for strings
+"""
+•Concatenation
+Strings can be glued together (concatenated) with the + operator: "Hello" + "World" will result in "HelloWorld"
+
+•Repetition
+String can be repeated or repeatedly concatenated with the asterisk operator "": "-" 3 will result in "---"
+
+•Indexing
+"Python"[0] will result in "P"
+
+•Slicing
+Substrings can be created with the slice or slicing notation, i.e., two indices in square brackets separated by a colon: "Python"[2:4] will result in "th"
+
+String Slicing
+
+•Size
+len("Python") will result in 6
+
+"""
+
+#Immutable Strings
+
+"""Like strings in Java and unlike C or C++, Python strings cannot be changed.
+Trying to change an indexed position will raise an error:
+
+s = "Some things are immutable!"
+s[-1] = "." 
+
+OUTPUT:
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-53-2fa9c6f1b317> in <module>
+      1 s = "Some things are immutable!"
+----> 2s[-1] = "."
+TypeError: 'str' object does not support item assignment
+
+
+Beginners in Python are often confused, when they see the following codelines:
+
+txt = "He lives in Berlin!"
+txt = "He lives in Hamburg!"
+The variable "txt" is a reference to a string object. We define a completely new string object in the second assignment.
+So, you shouldn't confuse the variable name with the referenced object!
+
+"""
+
+"""A String Peculiarity
+Strings show a special effect, which we will illustrate in the following example.
+We will need the "is"-Operator. If both a and b are strings, "a is b" checks if they have the same identity,
+i.e., share the same memory location. If "a is b" is True, then it trivially follows that "a == b" has to be True as well.
+Yet, "a == b" True doesn't imply that "a is b" is True as well!
+
+Let's have a look at how strings are stored in Python:"""
+
+a = "Linux"
+b = "Linux"
+a is b
+
+"""OUTPUT:
+True
+
+Okay, but what happens, if the strings are longer? We use the longest village name in the world in the following example.
+It's a small village with about 3000 inhabitants in the South of the island of Anglesey in the North-West of Wales:
+"""
+
+a = "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch"
+b = "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch"
+a is b
+
+"""OUTPUT:
+True
+
+Nothing has changed in our first "Linux" example. But what works for Wales doesn't work e.g., for Baden-Württemberg in Germany:
+"""
+
+a = "Baden-Württemberg"
+b = "Baden-Württemberg"
+a is b
+
+"""
+OUTPUT:
+False
+"""
+
+a == b
+
+"""
+OUTPUT:
+True
+"""
+
+"""
+You are right, it has nothing to do with geographical places. The special character, i.e., the hyphen, is to "blame".
+"""
+
+a = "Baden!"
+b = "Baden!"
+a is b
+
+"""
+OUTPUT:
+False
+"""
+
+a = "Baden1"
+b = "Baden1"
+a is b
+
+"""
+OUTPUT:
+True
+"""
+
+
+#Byte Strings
+"""
+Python 3.0 uses the concepts of text and (binary) data instead of Unicode strings and 8-bit strings.
+Every string or text in Python 3 is Unicode, but encoded Unicode is represented as binary data.
+The type used to hold text is str, the type used to hold data is bytes.
+It's not possible to mix text and data in Python 3; it will raise TypeError.
+While a string object holds a sequence of characters (in Unicode), a bytes object holds a sequence of bytes,
+out of the range 0 to 255, representing the ASCII values. Defining bytes objects and casting them into strings:"""
+
+x = "Hallo"
+t = str(x)
+u = t.encode("UTF-8")
+print(u)
+
+"""OUTPUT:
+b'Hallo'"""
