@@ -434,7 +434,7 @@ len("Python") will result in 6
 
 #Immutable Strings
 
-"""Like strings in Java and unlike C or C++, Python strings cannot be changed.
+"""Like strings in Java and unlike C or C++, Python strings cannot be changed using indexing method.
 Trying to change an indexed position will raise an error:
 
 s = "Some things are immutable!"
@@ -458,7 +458,8 @@ So, you shouldn't confuse the variable name with the referenced object!
 
 """
 
-"""A String Peculiarity
+#A String Peculiarity
+"""
 Strings show a special effect, which we will illustrate in the following example.
 We will need the "is"-Operator. If both a and b are strings, "a is b" checks if they have the same identity,
 i.e., share the same memory location. If "a is b" is True, then it trivially follows that "a == b" has to be True as well.
