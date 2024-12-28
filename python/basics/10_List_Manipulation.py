@@ -276,6 +276,7 @@ ValueError: list.remove(x): x not in list"""
 
 """The method "index" can be used to find the position of an element within a list.
 How index() Works
+
 The list.index(x, start, end) method returns the index of the first occurrence of the element x in the list, 
 within the specified range [start:end) (start inclusive, end exclusive). 
 If the element is not found within the range, it raises a ValueError.

@@ -36,28 +36,26 @@ Of course, "hello" is not a proper Python command, so the interactive shell retu
 
 '''
 
-'''THE FIRST REAL COMMAND WHICH WE'LL USE IS THE PRINT COMMAND, AND PRINT THE MANDATORY CODE OF ANY PROGRAMMING LANGUAGE WHICH IS 'HELLO WORLD':
+'''THE FIRST REAL COMMAND WHICH WE'LL USE IS THE PRINT COMMAND, AND PRINT THE MANDATORY CODE OF ANY PROGRAMMING LANGUAGE WHICH IS 'HELLO WORLD':'''
 
-    print("Hello World")
+print("Hello World")
 
-    OUTPUT:
+"""    OUTPUT:
     Hello World
 
-    'After that whatever we enter as a input will be printed even without having to use the print statement again:'
+'After that whatever we enter as a input will be printed even without having to use the print statement again:'
 
     Example:
     3
     Output:
-    3
+    3 """
     
 
-'''
-
-'''How to Quit the Python Shell
+''' How to Quit the Python Shell
 So, we have just started, and we are already talking about quitting the shell. We do this, because we know, how annoying it can be,
 if you don't know how to properly quit a program.
-
-It's easy to end the interactive session: You can either use exit() or Ctrl-D'''
+'''
+'''It's easy to end the interactive session: You can either use exit() or Ctrl-D'''
 
 
 """REAL-TIME RESULTS WHICH I WAS PRACTICISING ALONG ON MY UBUNTU CLI:

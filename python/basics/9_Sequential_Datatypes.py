@@ -155,7 +155,7 @@ group = ["Bob", 23, "George", 72, "Myriam", 29]
 #Sublists
 """
 Lists can have sublists as elements. These sublists may contain sublists as well, 
-i.e. lists can be recursively constructed by sublist structures.
+i.e. lists can be recursively constructed by sublist structures."""
 
 person = [["Marc", "Mayer"], 
           ["17, Oxford Str", "12345", "London"], 
@@ -163,51 +163,47 @@ person = [["Marc", "Mayer"],
 name = person[0]
 print(name)
 
-OUTPUT:
-['Marc', 'Mayer']
+#OUTPUT:['Marc', 'Mayer']
 
 first_name = person[0][0]
 print(first_name)
 
-OUTPUT:
-Marc
+#OUTPUT:Marc
 
 last_name = person[0][1]
 print(last_name)
 
-OUTPUT:
-Mayer
+#OUTPUT:Mayer
 
 address = person[1]
 print(address)
 
-OUTPUT:
-['17, Oxford Str', '12345', 'London']
+#OUTPUT:['17, Oxford Str', '12345', 'London']
 
 street = person[1][0]
 print(street)
 
-OUTPUT:
-17, Oxford Str
+#OUTPUT:17, Oxford Str
 
 
-We could have used our variable address as well:
+#We could have used our variable address as well:
 
 street = address[0]
 print(street)
-OUTPUT:
-17, Oxford Str
-The next example shows a more complex list with a deeply structured list:
+
+#OUTPUT:17, Oxford Str
+
+"""The next example shows a more complex list with a deeply structured list:"""
 
 complex_list = [["a", ["b", ["c", "x"]]]]
 complex_list = [["a", ["b", ["c", "x"]]], 42]
 complex_list[0][1]
-OUTPUT:
-['b', ['c', 'x']]
+
+#OUTPUT:['b', ['c', 'x']]
+
 complex_list[0][1][1][0]
-OUTPUT:
-'c'
-"""
+
+#OUTPUT:'c'
 
 
 #Changing list
@@ -242,6 +238,7 @@ OUTPUT:
 
 shopping_list = ['milk', 'yoghurt', 'egg', 'butter', 'bread', 'bananas']
 cart = []
+
 #  "pop()"" removes the last element of the list and returns it
 article = shopping_list.pop()  
 print(article, shopping_list)
@@ -277,16 +274,16 @@ Where is the benefit of tuples?
 •The main advantage of tuples is that tuples can be used as keys in dictionaries, while lists can't.
 
 The following example shows how to define a tuple and how to access a tuple. 
-Furthermore, we can see that we raise an error, if we try to assign a new value to an element of a tuple:
+Furthermore, we can see that we raise an error, if we try to assign a new value to an element of a tuple:"""
 
 t = ("tuples", "are", "immutable")
 t[0]
 
-OUTPUT:
-'tuples'
+#OUTPUT:'tuples'
 
 t[0] = "assignments to elements are not possible"
-OUTPUT:
+
+"""OUTPUT:
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
 <ipython-input-13-fa4ace6c4d57> in <module>
@@ -421,19 +418,20 @@ OUTPUT:
 The augmented assignment for "*" can be used as well: s *= n is the same as s = s * n."""
 
 #The Pitfalls of Repetitions
-"""In our previous examples we applied the repetition operator on strings and flat lists. We can apply it to nested lists as well:
+"""In our previous examples we applied the repetition operator on strings and flat lists. We can apply it to nested lists as well:"""
 
 x = ["a","b","c"]
 y = [x] * 4
-y
-OUTPUT:
-[['a', 'b', 'c'], ['a', 'b', 'c'], ['a', 'b', 'c'], ['a', 'b', 'c']]
-y[0][0] = "p"
-y
-OUTPUT:
-[['p', 'b', 'c'], ['p', 'b', 'c'], ['p', 'b', 'c'], ['p', 'b', 'c']]
+print(y)
 
-This result is quite astonishing for beginners of Python programming. 
+#OUTPUT:[['a', 'b', 'c'], ['a', 'b', 'c'], ['a', 'b', 'c'], ['a', 'b', 'c']]
+
+y[0][0] = "p"
+print(y)
+
+#OUTPUT:[['p', 'b', 'c'], ['p', 'b', 'c'], ['p', 'b', 'c'], ['p', 'b', 'c']]
+
+"""This result is quite astonishing for beginners of Python programming. 
 We have assigned a new value to the first element of the first sublist of y, i.e. y[0][0] and we have 
 "automatically" changed the first elements of all the sublists in y, i.e. y[1][0], y[2][0], y[3][0].
 
